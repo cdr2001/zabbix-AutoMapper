@@ -18,8 +18,8 @@ tags used by the script
 am.host.type => type of the host, should be defined in config.json
 am.link.connect_to => the host to connect to --> standard same class C network
 am.link.label => the label to show on the link
-am.link.color => the color of the link --> standard 00ff00 (green) --> defined in config.json
-am.link.draw_type => the type of the link (0: line, 2: bold line, 3: dotted line, 4: dashed line) --> standard 0 --> defined in config.json
+am.link.color => the color of the link --> standard can defined in config.json
+am.link.draw_type => the type of the link (0: line, 2: bold line, 3: dotted line, 4: dashed line) --> standard defined in config.json
 
 - clients-layouts per switch-cluster:
   - `grid`
