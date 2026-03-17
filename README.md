@@ -12,7 +12,7 @@ python automap.py
 
 python automap.py --help to get help
 
-python3 automap.py --token [zabbix token] --map [zabbix map] --group [zabbix host group] --url [zabbix url] --map_layout [start|grid|snowflake]
+python3 automap.py --token [zabbix token] --map [zabbix map] --group [zabbix host group] --url [zabbix url] --map_layout [grid|snowflake]
 
 tags used by the script
 am.host.type => type of the host, should be defined in config.json
