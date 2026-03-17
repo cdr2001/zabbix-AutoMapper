@@ -1,9 +1,53 @@
 {
   "default_host_type": "server",
+  "default_link_colour": "00FF00",
+  "default_draw_type": 0,
+  "endpoint_layout": "grid",
+  "default_link_distance": 160,
   "host_type": {
     "server": {
       "label": "{HOSTNAME}\n({HOST.IP})",
       "iconid_off": "150",
+      "iconid_on": 0,
+      "iconid_disabled": 0,
+      "iconid_maintenance": 0,
+      "elementtype": 0
+    },
+    "pc": {
+      "label": "{HOSTNAME}\n({HOST.IP})",
+      "iconid_off": "160",
+      "iconid_on": 0,
+      "iconid_disabled": 0,
+      "iconid_maintenance": 0,
+      "elementtype": 0
+    },
+    "notebook": {
+      "label": "{HOSTNAME}\n({HOST.IP})",
+      "iconid_off": "161",
+      "iconid_on": 0,
+      "iconid_disabled": 0,
+      "iconid_maintenance": 0,
+      "elementtype": 0
+    },
+    "telefon": {
+      "label": "{HOSTNAME}\n({HOST.IP})",
+      "iconid_off": "162",
+      "iconid_on": 0,
+      "iconid_disabled": 0,
+      "iconid_maintenance": 0,
+      "elementtype": 0
+    },
+    "satellit": {
+      "label": "{HOSTNAME}\n({HOST.IP})",
+      "iconid_off": "163",
+      "iconid_on": 0,
+      "iconid_disabled": 0,
+      "iconid_maintenance": 0,
+      "elementtype": 0
+    },
+    "ups": {
+      "label": "{HOSTNAME}\n({HOST.IP})",
+      "iconid_off": "164",
       "iconid_on": 0,
       "iconid_disabled": 0,
       "iconid_maintenance": 0,
