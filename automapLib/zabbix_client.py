@@ -9,21 +9,16 @@ class ZabbixClient:
         if not groups:
             raise RuntimeError(f"Hostgruppe nicht gefunden: {group_name}")
         gid = groups[0]["groupid"]
-        return self.api.host.get(
-            groupids=[gid],
-            output=["hostid", "host", "name"],
-            selectTags="extend",
-            selectInterfaces=["ip"]
-        )
+        return self.api.host.get(groupids=[gid], output=["hostid", "host", "name", "description"], selectTags="extend", selectInterfaces=["ip"])
 
     def map(self, map_name):
-        maps = self.api.map.get(output="extend", selectSelements="extend", selectLinks="extend", filter={"name": [map_name]})
+        maps = self.api.map.get(output="extend", selectSelements="extend", selectLinks="extend", selectShapes="extend", filter={"name": [map_name]})
         if not maps:
             raise RuntimeError(f"Map nicht gefunden: {map_name}")
         return maps[0]
 
     def parse_existing(self, map_obj):
-        result = {"by_hostid": {}, "hostid_to_selementid": {}}
+        result = {"by_hostid": {}, "hostid_to_selementid": {}, "shapes": map_obj.get("shapes", []) or []}
         for s in map_obj.get("selements", []):
             sid = s.get("selementid")
             for e in s.get("elements", []) or []:
@@ -35,5 +30,8 @@ class ZabbixClient:
                         result["hostid_to_selementid"][hid] = int(sid)
         return result
 
-    def update(self, mapid, selements, links):
-        return self.api.map.update(sysmapid=int(mapid), selements=selements, links=links)
+    def update(self, mapid, selements, links, shapes=None):
+        payload = {"sysmapid": int(mapid), "selements": selements, "links": links}
+        if shapes is not None:
+            payload["shapes"] = shapes
+        return self.api.map.update(**payload)

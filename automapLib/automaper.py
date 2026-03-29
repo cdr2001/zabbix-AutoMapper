@@ -13,23 +13,22 @@ class Automaper:
 
     def run(self):
         hosts = self.z.hosts(self.group_name)
-
         graph = GraphBuilder(self.config)
         graph.add_hosts(hosts)
         graph.build_edges()
-
         nodes = graph.get_nodes()
         edges = graph.get_edges()
-
         current_map = self.z.map(self.map_name)
         builder = MapBuilder(int(current_map["width"]), int(current_map["height"]), self.config, self.layout)
 
         existing = self.z.parse_existing(current_map)
         selements = builder.build_selements(nodes, edges, existing)
-        self.z.update(current_map["sysmapid"], selements, [])
+        shapes = builder.build_shapes(nodes, edges)
+        self.z.update(current_map["sysmapid"], selements, [], shapes)
 
         refreshed_map = self.z.map(self.map_name)
         refreshed_existing = self.z.parse_existing(refreshed_map)
         selements = builder.build_selements(nodes, edges, refreshed_existing)
         links = builder.build_links(edges, refreshed_existing)
-        self.z.update(refreshed_map["sysmapid"], selements, links)
+        shapes = builder.build_shapes(nodes, edges)
+        self.z.update(refreshed_map["sysmapid"], selements, links, shapes)
