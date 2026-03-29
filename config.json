@@ -3,8 +3,35 @@
   "default_link_colour": "00FF00",
   "default_draw_type": 0,
   "endpoint_layout": "grid",
-  "default_link_distance": 160,
+  "default_link_distance": 220,
+  "show_description": true,
+  "description_max_lines": 2,
+  "description_max_line_length": 40,
   "host_type": {
+    "cloud": {
+      "label": "{HOSTNAME}\n({HOST.IP})",
+      "iconid_off": "170",
+      "iconid_on": 0,
+      "iconid_disabled": 0,
+      "iconid_maintenance": 0,
+      "elementtype": 0
+    },
+    "router": {
+      "label": "{HOSTNAME}\n({HOST.IP})",
+      "iconid_off": "125",
+      "iconid_on": 0,
+      "iconid_disabled": 0,
+      "iconid_maintenance": 0,
+      "elementtype": 0
+    },
+    "switch": {
+      "label": "{HOSTNAME}\n({HOST.IP})",
+      "iconid_off": "155",
+      "iconid_on": 0,
+      "iconid_disabled": 0,
+      "iconid_maintenance": 0,
+      "elementtype": 0
+    },
     "server": {
       "label": "{HOSTNAME}\n({HOST.IP})",
       "iconid_off": "150",
@@ -29,7 +56,7 @@
       "iconid_maintenance": 0,
       "elementtype": 0
     },
-    "telefon": {
+    "phone": {
       "label": "{HOSTNAME}\n({HOST.IP})",
       "iconid_off": "162",
       "iconid_on": 0,
@@ -53,17 +80,25 @@
       "iconid_maintenance": 0,
       "elementtype": 0
     },
-    "switch": {
+    "iot": {
       "label": "{HOSTNAME}\n({HOST.IP})",
-      "iconid_off": "155",
+      "iconid_off": "165",
       "iconid_on": 0,
       "iconid_disabled": 0,
       "iconid_maintenance": 0,
       "elementtype": 0
     },
-    "router": {
+    "camera": {
       "label": "{HOSTNAME}\n({HOST.IP})",
-      "iconid_off": "125",
+      "iconid_off": "166",
+      "iconid_on": 0,
+      "iconid_disabled": 0,
+      "iconid_maintenance": 0,
+      "elementtype": 0
+    },
+    "printer": {
+      "label": "{HOSTNAME}\n({HOST.IP})",
+      "iconid_off": "167",
       "iconid_on": 0,
       "iconid_disabled": 0,
       "iconid_maintenance": 0,
