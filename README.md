@@ -1,31 +1,31 @@
 <h2>zabbix-AutoMapper 0.5</h2>
 
-Generate automatic map placement for Zabbix hosts using zabbix API. (Tested with zabbix	7.4.8)
+Generate automatic map placement for Zabbix hosts using zabbix API. (Tested with zabbix	7.4.8)<br>
+<br>
+<h4>a. Prerequisites </h4>
+install the required python packages<br>
+<br>
+pip install -r requirements.txt<br>
+<br>
+<h4>b. How to run the script</h4>
+python automap.py<br>
+<br>
+python automap.py --help => to get help<br>
+<br>
+python3 automap.py --token [zabbix token] --map [zabbix map] --group [zabbix host group] --url [zabbix url] --map_layout [hierarchical|grid|snowflake]<br>
 
-Prerequisites
-install the required python packages
+<h4>c. tags used by the script</h4>
+- am.host.type => type of the host, should be defined in config.json<br>
+- am.link.connect_to => the host to connect to --> standard same class C network<br>
+- am.link.label => the label to show on the link<br>
+- am.link.color => the color of the link --> standard can defined in config.json<br>
+- am.link.draw_type => the type of the link (0: line, 2: bold line, 3: dotted line, 4: dashed line) --> standard defined in config.json<br>
+- am.host.url => URL to device Webadmin <br>
+- am.layout.endpoints = [grid|circle|half_circle] => use at router - can overwrite layout for single network<br>
 
-pip install -r requirements.txt
-
-How to run the script
-python automap.py
-
-python automap.py --help => to get help
-
-python3 automap.py --token [zabbix token] --map [zabbix map] --group [zabbix host group] --url [zabbix url] --map_layout [hierarchical|grid|snowflake]
-
-tags used by the script
-am.host.type => type of the host, should be defined in config.json
-am.link.connect_to => the host to connect to --> standard same class C network
-am.link.label => the label to show on the link
-am.link.color => the color of the link --> standard can defined in config.json
-am.link.draw_type => the type of the link (0: line, 2: bold line, 3: dotted line, 4: dashed line) --> standard defined in config.json
-am.host.url => URL to device Webadmin 
-am.layout.endpoints = [grid|circle|half_circle] => use at router - can overwrite layout for single network
-
-- clients-layouts per switch-cluster:
-  - `grid`
-  - `circle`
-  - `half_circle`
-  - 'hierarchical'
-  - 'snowflake'
+<h4>d. clients-layouts per switch-cluster:</h4>
+  - `grid`<br>
+  - `circle`<br>
+  - `half_circle`<br>
+  - 'hierarchical'<br>
+  - 'snowflake'<br>
