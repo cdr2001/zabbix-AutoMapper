@@ -1,4 +1,4 @@
-zabbix-AutoMapper
+<h2>zabbix-AutoMapper 0.5</h2>
 
 Generate automatic map placement for Zabbix hosts using zabbix API. (Tested with zabbix	7.4.8)
 
