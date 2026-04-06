@@ -3,6 +3,8 @@ from collections import defaultdict
 
 TYPE_ORDER = {
     "server": 1,
+    "nas": 1,
+    "wlan": 1,
     "pc": 2,
     "notebook": 3,
     "phone": 4,
