@@ -40,6 +40,22 @@
       "iconid_maintenance": 0,
       "elementtype": 0
     },
+    "nas": {
+      "label": "{HOSTNAME}\n({HOST.IP})",
+      "iconid_off": "150",
+      "iconid_on": 0,
+      "iconid_disabled": 0,
+      "iconid_maintenance": 0,
+      "elementtype": 0
+    },
+    "wlan": {
+      "label": "{HOSTNAME}\n({HOST.IP})",
+      "iconid_off": "150",
+      "iconid_on": 0,
+      "iconid_disabled": 0,
+      "iconid_maintenance": 0,
+      "elementtype": 0
+    },
     "pc": {
       "label": "{HOSTNAME}\n({HOST.IP})",
       "iconid_off": "160",
