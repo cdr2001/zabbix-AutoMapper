@@ -10,9 +10,9 @@ pip install -r requirements.txt
 How to run the script
 python automap.py
 
-python automap.py --help to get help
+python automap.py --help => to get help
 
-python3 automap.py --token [zabbix token] --map [zabbix map] --group [zabbix host group] --url [zabbix url] --map_layout [grid|snowflake]
+python3 automap.py --token [zabbix token] --map [zabbix map] --group [zabbix host group] --url [zabbix url] --map_layout [hierarchical|grid|snowflake]
 
 tags used by the script
 am.host.type => type of the host, should be defined in config.json
@@ -20,10 +20,12 @@ am.link.connect_to => the host to connect to --> standard same class C network
 am.link.label => the label to show on the link
 am.link.color => the color of the link --> standard can defined in config.json
 am.link.draw_type => the type of the link (0: line, 2: bold line, 3: dotted line, 4: dashed line) --> standard defined in config.json
+am.host.url => URL to device Webadmin 
+am.layout.endpoints = [grid|circle|half_circle] => use at router - can overwrite layout for single network
 
 - clients-layouts per switch-cluster:
   - `grid`
   - `circle`
   - `half_circle`
-- can be overwritte per switch or Host via zabbix:
-  - `am.layout.endpoints=grid|circle|half_circle`
+  - 'hierarchical'
+  - 'snowflake'
