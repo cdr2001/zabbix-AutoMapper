@@ -32,7 +32,7 @@ python3 automap.py --token [zabbix token] --map [zabbix map] --group [zabbix hos
 - am.link.color => the color of the link --> standard can defined in config.json<br>
 - am.link.draw_type => the type of the link (0: line, 2: bold line, 3: dotted line, 4: dashed line) --> standard defined in config.json<br>
 - am.host.url => URL to device Webadmin <br>
-- am.layout.endpoints = [grid|circle|half_circle] => use at router - can overwrite layout for single network<br>
+- am.layout.endpoints = [grid|circle|half_circle] => use at router - can overwrite layout for a single network<br>
 
 <h4>e. clients-layouts per switch-cluster:</h4>
   - grid<br>
